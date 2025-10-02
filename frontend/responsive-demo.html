@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Social - Responsive Demo</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .demo-section {
+        margin: 20px 0;
+        padding: 20px;
+        border: 2px dashed #374151;
+        border-radius: 8px;
+      }
+      .demo-title {
+        color: #2563eb;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .breakpoint-info {
+        background: #1f2937;
+        padding: 10px;
+        border-radius: 6px;
+        margin: 10px 0;
+        font-family: monospace;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo" onclick="location.href='index.html'">MiniSocial</div>
+      <input id="search" class="search" type="text" placeholder="Search users..." />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="#" onclick="alert('Messages coming soon')">Messages</a>
+        <a href="#" onclick="alert('Notifications coming soon')">Notifications</a>
+        <div class="dropdown">
+          <button id="profileMenu" class="create-post">Profile ▾</button>
+          <div class="dropdown-menu">
+            <a href="profile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="#" onclick="alert('Logout')">Logout</a>
+          </div>
+        </div>
+      </nav>
+      <button class="create-post">+ Post</button>
+    </header>
+
+    <main class="container">
+      <h1 class="text-center">📱 Responsive Design Demo</h1>
+      
+      <div class="demo-section">
+        <div class="demo-title">📏 Responsive Breakpoints</div>
+        <div class="breakpoint-info">
+          • Mobile: 0px - 639px (Small screens, phones)<br>
+          • Tablet: 640px - 1023px (Medium screens, tablets)<br>
+          • Desktop: 1024px - 1279px (Large screens, laptops)<br>
+          • Large Desktop: 1280px+ (Extra large screens)
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <div class="demo-title">📱 Mobile Features</div>
+        <ul>
+          <li>✅ Touch-friendly buttons (44px minimum height)</li>
+          <li>✅ Responsive navigation that stacks on mobile</li>
+          <li>✅ Hidden search bar on small screens</li>
+          <li>✅ Larger text inputs (16px font to prevent zoom)</li>
+          <li>✅ Optimized spacing and padding</li>
+          <li>✅ Simplified navigation (hides some menu items)</li>
+        </ul>
+      </div>
+
+      <div class="demo-section">
+        <div class="demo-title">🎯 Sample Post (Responsive)</div>
+        <div class="card post">
+          <div class="post-header">
+            <div class="profile-avatar">J</div>
+            <div>
+              <div class="post-author">@johndoe</div>
+              <div class="post-time">2h ago</div>
+            </div>
+          </div>
+          <div class="post-content">
+            This is a sample post to demonstrate responsive design! 🚀<br>
+            Notice how the layout adapts to different screen sizes.
+          </div>
+          <img src="https://via.placeholder.com/600x300/2563eb/ffffff?text=Sample+Image" alt="Sample image" loading="lazy" />
+          <div class="post-actions">
+            <button class="post-action">❤️ 42</button>
+            <button class="post-action">💬 5</button>
+            <button class="post-action">🔄 Share</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <div class="demo-title">👤 Sample Profile (Responsive)</div>
+        <div class="card profile">
+          <div class="profile-avatar">A</div>
+          <div class="profile-info">
+            <h2>@alice_dev</h2>
+            <div class="profile-bio">Full-stack developer passionate about responsive design and user experience.</div>
+            <div class="profile-stats">
+              <div class="profile-stat">
+                <div class="profile-stat-number">1.2K</div>
+                <div class="profile-stat-label">Followers</div>
+              </div>
+              <div class="profile-stat">
+                <div class="profile-stat-number">856</div>
+                <div class="profile-stat-label">Following</div>
+              </div>
+              <div class="profile-stat">
+                <div class="profile-stat-number">234</div>
+                <div class="profile-stat-label">Posts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <div class="demo-title">📝 Sample Form (Responsive)</div>
+        <form class="card">
+          <label>Username</label>
+          <input type="text" placeholder="Enter your username" />
+          
+          <label>Bio</label>
+          <textarea rows="3" placeholder="Tell us about yourself..."></textarea>
+          
+          <label>Profile Picture URL</label>
+          <input type="url" placeholder="https://example.com/image.jpg" />
+          
+          <button type="submit" class="create-post">Save Changes</button>
+        </form>
+      </div>
+
+      <div class="demo-section">
+        <div class="demo-title">🎨 Design Features</div>
+        <ul>
+          <li>✅ Dark theme optimized for all devices</li>
+          <li>✅ Flexible grid system</li>
+          <li>✅ Scalable typography</li>
+          <li>✅ Optimized images with lazy loading</li>
+          <li>✅ Smooth transitions and hover effects</li>
+          <li>✅ Accessible color contrast</li>
+          <li>✅ Print-friendly styles</li>
+        </ul>
+      </div>
+
+      <div class="demo-section">
+        <div class="demo-title">🧪 Test Instructions</div>
+        <ol>
+          <li>Resize your browser window to see responsive changes</li>
+          <li>Use browser dev tools to simulate different devices</li>
+          <li>Test on actual mobile devices for best results</li>
+          <li>Check both portrait and landscape orientations</li>
+        </ol>
+      </div>
+    </main>
+
+    <script>
+      // Display current screen size
+      function updateScreenInfo() {
+        const width = window.innerWidth;
+        let device = 'Mobile';
+        if (width >= 1280) device = 'Large Desktop';
+        else if (width >= 1024) device = 'Desktop';
+        else if (width >= 640) device = 'Tablet';
+        
+        document.title = `Mini Social - Responsive Demo (${device} - ${width}px)`;
+      }
+      
+      updateScreenInfo();
+      window.addEventListener('resize', updateScreenInfo);
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+

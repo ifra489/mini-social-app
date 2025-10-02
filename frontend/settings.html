@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Social - Settings</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo" onclick="location.href='index.html'">MiniSocial</div>
+      <input id="search" class="search" type="text" placeholder="Search users..." />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="#" onclick="alert('Messages coming soon')">Messages</a>
+        <a href="#" onclick="alert('Notifications coming soon')">Notifications</a>
+        <div class="dropdown">
+          <button id="profileMenu" class="create-post">Profile ▾</button>
+          <div class="dropdown-menu">
+            <a href="profile.html">Profile</a>
+            <a href="settings.html" class="active">Settings</a>
+            <a href="#" id="logoutBtn">Logout</a>
+          </div>
+        </div>
+      </nav>
+      <button class="create-post" onclick="location.href='index.html'">+ Post</button>
+    </header>
+
+    <main class="container">
+      <h2>Settings</h2>
+      <form id="settingsForm" class="card">
+        <label>Bio</label>
+        <textarea name="bio" rows="4"></textarea>
+        <label>Profile Picture URL</label>
+        <input type="text" name="profilePicture" />
+        <button type="submit">Save</button>
+      </form>
+    </main>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/auth-check.js"></script>
+    <script>
+      // Check auth when page loads
+      requireAuth();
+    </script>
+    <script src="./js/settings.js"></script>
+  </body>
+  </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Social - Settings</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo" onclick="location.href='index.html'">MiniSocial</div>
+      <input id="search" class="search" type="text" placeholder="Search users..." />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="#" onclick="alert('Messages coming soon')">Messages</a>
+        <a href="#" onclick="alert('Notifications coming soon')">Notifications</a>
+        <div class="dropdown">
+          <button id="profileMenu" class="create-post">Profile ▾</button>
+          <div class="dropdown-menu">
+            <a href="profile.html">Profile</a>
+            <a href="settings.html" class="active">Settings</a>
+            <a href="#" id="logoutBtn">Logout</a>
+          </div>
+        </div>
+      </nav>
+      <button class="create-post" onclick="location.href='index.html'">+ Post</button>
+    </header>
+
+    <main class="container">
+      <h2>Settings</h2>
+      <form id="settingsForm" class="card" enctype="multipart/form-data">
+        <label>Bio</label>
+        <textarea name="bio" rows="4"></textarea>
+        <label>Profile Picture</label>
+        <input type="file" id="profilePicFile" name="profilePic" accept="image/*" />
+        <label>Or Profile Picture URL</label>
+        <input type="text" name="profilePic" />
+        <button type="submit">Save</button>
+      </form>
+    </main>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/auth-check.js"></script>
+    <script>
+      // Check auth when page loads
+      requireAuth();
+    </script>
+    <script src="./js/settings.js"></script>
+  </body>
+  </html>
+
+
+

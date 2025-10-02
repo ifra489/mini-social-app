@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Social - Profile</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo" onclick="location.href='index.html'">MiniSocial</div>
+      <input id="search" class="search" type="text" placeholder="Search users..." />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="#" onclick="alert('Messages coming soon')">Messages</a>
+        <a href="#" onclick="alert('Notifications coming soon')">Notifications</a>
+        <div class="dropdown">
+          <button id="profileMenu" class="create-post">Profile ▾</button>
+          <div class="dropdown-menu">
+            <a href="profile.html" class="active">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="#" id="logoutBtn">Logout</a>
+          </div>
+        </div>
+      </nav>
+      <button class="create-post" onclick="location.href='index.html'">+ Post</button>
+    </header>
+
+    <main class="container">
+      <section id="profile" class="profile"></section>
+      <section id="profilePosts" class="feed"></section>
+    </main>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/auth-check.js"></script>
+    <script>
+      // Check auth when page loads
+      requireAuth();
+    </script>
+    <script src="./js/profile.js"></script>
+  </body>
+  </html>
+
+
+
